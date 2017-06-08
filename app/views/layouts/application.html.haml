@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title BlogTest
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %nav.navbar.navbar-default
+      .container-fluid
+        / Brand and toggle get grouped for better mobile display
+        .navbar-header
+          %span.navbar-brand 
+            Blog
+        .navbar-collapse
+          %ul.nav.navbar-nav
+            %li.active= link_to(current_model_name, url_for)
+            %li= new_article_button
+          - if user_signed_in?
+            %p.navbar-text
+              = current_user.email
+            %ul.nav.navbar-nav.navbar-right
+              %li= link_to(t('loggout'), destroy_user_session_path, method: :delete)
+    .container-fluid
+      .row 
+        .col-md-12
+          // flash => {'errors' => 'message bla bla', 'info' => 'bla bla'}
+          - flash.each do |name, msg|
+            = content_tag(:div, msg, class: flash_dom_class(name))
+
+      .row
+        .col-md-2
+        .col-md-10
+          = yield

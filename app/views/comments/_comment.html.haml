@@ -1,0 +1,15 @@
+%tr
+  %td 
+    = comment.commenter
+  %td
+    = comment.body
+  %td
+
+    = link_to(edit_article_comment_path(article, comment), class: 'btn btn-primary btn-xs') do
+      %span.glyphicon.glyphicon-pencil
+      = t('edit')
+      
+    = link_to(article_comment_path(article, comment), class: 'btn btn-danger btn-xs', method: :delete) do
+      %span.glyphicon.glyphicon-trash
+      = t('delete')
+

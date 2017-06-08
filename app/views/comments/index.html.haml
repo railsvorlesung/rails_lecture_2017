@@ -1,0 +1,7 @@
+%h1
+  = t('.comments_for', article: @article.title)
+  %small
+    = Comment.model_name.human(count: @comments.total_count)
+= render partial: 'comments', locals: {comments: @comments, article: @article} 
+= paginate(@comments)
+

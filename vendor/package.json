@@ -1,0 +1,10 @@
+{
+  "name": "blog-test",
+  "version": "1.0.0",
+  "main": "app/assets/yarn.js",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/core": "^4.1.2",
+    "angular4": "^1.0.0"
+  }
+}

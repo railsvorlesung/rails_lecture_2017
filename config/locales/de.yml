@@ -1,0 +1,25 @@
+de:
+  articles:
+    index:
+      new:          'Neuer Artikel'
+      description: 'Top Artikel'
+    article:
+      delete:  'Löschen'
+
+  comments:
+    index:
+      comments_for: 'Kommentare für %{article}'
+  activerecord:
+    models:
+      article: Artikel
+      comment: 
+        zero:  keine Kommentare 
+        one:   Kommentar
+        other: '%{count} Kommentare'
+    attributes:
+      article:
+        title: 'Titel'
+        body:  'Inhalt'
+      comment:
+        commenter: 'Autor'
+        body:      'Kommentar'

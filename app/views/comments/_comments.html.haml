@@ -1,0 +1,9 @@
+%table.table.table-striped.table-hover
+  %thead
+    %tr
+      %th
+        = Comment.human_attribute_name(:commenter) 
+      %th
+        = Comment.human_attribute_name(:body) 
+      %th
+  = render partial: 'comment', collection: comments, locals: {article: article}

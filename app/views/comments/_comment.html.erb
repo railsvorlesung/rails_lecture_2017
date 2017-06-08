@@ -1,0 +1,20 @@
+<tr>
+  <td> 
+    <%= comment.commenter %>
+  </td>
+  <td>
+    <%= comment.body %>
+  </td>
+  <td>
+    <%= link_to(edit_article_comment_path(article, comment), class: 'btn btn-primary btn-xs') do %>
+      <span class="glyphicon glyphicon-pencil"></span>
+      <%= t('edit') %>
+    <% end %>
+      
+    <%= link_to(article_comment_path(article, comment), class: 'btn btn-danger btn-xs', method: :delete) do %>
+      <span class="glyphicon glyphicon-trash"></span>
+      <%= t('delete') %>
+    <% end %>
+  </td>
+</tr>
+

@@ -1,0 +1,4 @@
+= default_form_for( @comment,url: article_comment_path(@article,@comment)) do |f|
+  = f.input :commenter
+  = f.input :body
+  = f.submit

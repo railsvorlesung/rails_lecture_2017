@@ -1,0 +1,9 @@
+.row
+  .col-md-8
+    %h4= article.title
+  .col-md-3
+    .btn-group
+      = link_button Article.model_name.human, article
+      = link_button(Comment.model_name.human, article_comments_path(article), class: 'btn-primary')
+
+      = link_button( t('.delete'), article, method: :delete, class: 'btn-warning')

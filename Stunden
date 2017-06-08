@@ -1,0 +1,34 @@
+https://twitter.com/railsvorlesung
+
+htwrails2017@avarteq.de
+
+
+paas.anynines.com
+
+
+* 11.05
+* 18.05
+* 08.06
+* 22.06
+* 29.06
+
+
+## redis Beschreibung im Marketplace falsch
+
+
+* Verwendung von Git auf Github.com
+* Ruby und Ruby on Rails Konventionen inkl. Namenskonventionen sind einzuhalten
+* Deployment auf anynines.com
+* Dateiupload: Amazon S3
+* Assoziationen
+** 1:1
+** 1:n
+** m:n
+* File-Upload
+** Paperclip oder CarrierWave
+* Verwendung eines Custom-Mailers
+** Verwendung des letter opener gems bei der lokalen Entwicklung (nicht in production)
+* Devise-Authentifizierung mit opt-in (Bestätigung der E-Mail Adresse)
+* Layout basierend auf Twitter-Bootstrap und verwendet die Bootstrap-Elemente wie vom Framework vorgesehen
+** boostrap-sass gem (alternativ twitter-bootstrap-rails, bootstrap-sass aber bevorzugt)
+* Alle Tests laufen durch (rake test)

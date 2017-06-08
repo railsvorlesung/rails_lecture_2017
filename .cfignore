@@ -1,0 +1,4 @@
+log/*
+config/env.yml
+manifest.yml
+secret.yml
