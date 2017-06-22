@@ -16,17 +16,19 @@
 user hat zugriff darin auf home/$username
 railsvorlesung8 auf a9s-railsvorlesung/home/railsvorlesung8/ schreiben
 
-Environment Variables:
+### Environment Variables:
 
+```yaml
 AWS_ACCESS_KEY_ID: <key>
 AWS_SECRET_ACCESS_KEY: <secret>
 AWS_REGION: 'eu-west-1'
 AWS_BUCKET: a9s-railsvorlesung
 AWS_PATH:  home/<username>
+```
 
-Paperclip config:
+### Paperclip config:
 
-
+```ruby
   config.paperclip_defaults = {
     :storage => :fog,
      :fog_credentials => {
@@ -38,6 +40,16 @@ Paperclip config:
      },
      :fog_host => "https://s3-eu-west-1.amazonaws.com/#{ENV['AWS_BUCKET']}/#{ENV['AWS_PATH']}"
   }
+```
+
+### Explorer for S3
+
+cyberduck for windows and Mac
+https://cyberduck.io/
+
+maybe try muCommander for Linux:
+https://wiki.ubuntuusers.de/Dateimanager/#muCommander
+
 
 ## Pushto anynines /cloudfoundry
 
@@ -62,6 +74,11 @@ cf ssh <appname> -t -c "/tmp/lifecycle/launcher /home/vcap/app 'rails c' ''"
 ## Usefull links
 
 * http://guides.rubyonrails.org/   # explain all basics of Ruby on Rails
+  * The Asset Pipeline
+  * Layouts and Rendering in Rails
+  * Active Record Query Interface
+  * Active Record Validations
+  * Active Record Associations
 * http://railscasts.com/
 * http://afreshcup.com/
 * http://rubular.com/              # Interactive Regex Helper
@@ -75,6 +92,7 @@ cf ssh <appname> -t -c "/tmp/lifecycle/launcher /home/vcap/app 'rails c' ''"
 * envyable (loads yaml file into environment variables for local development)
 * better-errors (prints better readable error pages in development)
 * rails-i18n (default translations for many languages)
+* jquery-rails (if query is missing by bootstrap)
 
 * bootstrap_form (provide FormBuilder for Bootstrap style)
 * kaminari (pagination of a list of elements)
@@ -82,6 +100,8 @@ cf ssh <appname> -t -c "/tmp/lifecycle/launcher /home/vcap/app 'rails c' ''"
 * activejob (for background processes, pls read the Rails Guide for further information)
 
 * prawn (PDF generation)
+
+
 
 ### Other Templating Engines
 
