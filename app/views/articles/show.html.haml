@@ -1,5 +1,7 @@
 %h1= @article.title
 = @article.body
+= image_tag  @article.image.url(:details)
 .row
   = link_to :back, :back
+  = link_to t('.download_image'), image_article_path(@article)
   = link_to :edit, edit_article_path(@article)

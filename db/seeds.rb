@@ -7,8 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #
 
-require 'factory_girl_rails'
-require 'ffaker'
-1.upto(10) do
-  FactoryGirl.create(:article)
+1.upto(10) do |i|
+  Article.create({
+    title: "Article - #{i}",
+    body:  "Article Body Text #{i}"
+  })
 end
+
+Article.create({
+  title: "Article with Image",
+  body:  "Article Body Text",
+  image: File.open(Rails.root.join('spec', 'fixtures', 'test.png'))
+})
+User.create!(email: 'test@avarteq.de', password: 'test1234', password_confirmation: 'test1234', confirmed_at: Date.today)
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

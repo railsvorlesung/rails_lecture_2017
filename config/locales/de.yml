@@ -1,4 +1,5 @@
 de:
+  success: 'Erfolgreich durchgeführt'
   articles:
     index:
       new:          'Neuer Artikel'
@@ -12,6 +13,9 @@ de:
   activerecord:
     models:
       article: Artikel
+      image:   
+        one: Bild
+        other: '%{count } Bilder'
       comment: 
         zero:  keine Kommentare 
         one:   Kommentar
@@ -20,6 +24,10 @@ de:
       article:
         title: 'Titel'
         body:  'Inhalt'
+        image: 'Basisbild'
+      image:
+        title: 'Bildtitel'
+        file:  'Datei'
       comment:
         commenter: 'Autor'
         body:      'Kommentar'

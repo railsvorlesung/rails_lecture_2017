@@ -17,6 +17,9 @@ module BlogTest
     config.autoload_paths << "#{Rails.root}/lib"
     config.i18n.default_locale = :de
 
+    config.custom_config_variable = {
+      weather_warnings: 'http://some-wetter-website'
+    }
     # config callbacks:
     # config.before_initialize
     config.after_initialize do

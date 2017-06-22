@@ -28,6 +28,9 @@ gem 'rails-i18n', '~> 5.0', '>= 5.0.3'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'paperclip'
+gem 'activeadmin'
+gem 'prawn'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -47,6 +50,8 @@ gem 'kaminari'
 gem 'kaminari-i18n'
 gem 'simple_form_bootstrap3'
 
+gem 'letter_opener_web'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -65,6 +70,8 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
   gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do

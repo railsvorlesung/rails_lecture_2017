@@ -15,7 +15,7 @@
             Blog
         .navbar-collapse
           %ul.nav.navbar-nav
-            %li.active= link_to(current_model_name, url_for)
+            %li.active= link_to(current_model_name, articles_path)
             %li= new_article_button
           - if user_signed_in?
             %p.navbar-text

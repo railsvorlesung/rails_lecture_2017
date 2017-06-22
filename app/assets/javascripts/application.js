@@ -12,5 +12,26 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+// require turbolinks
+//= require_self
+//
+//
+
+jQuery(document).ready(function(){
+  jQuery('a#add-image-form').on('click', function(){
+    var existingImageForm = jQuery('#new_image');
+    var newImageForm      = existingImageForm.clone();
+    var last_index     = parseInt( existingImageForm.find('input').first().attr('name').match(/[\d+]/), 10); 
+
+
+    newImageForm.find('input').each(function(index, input) {
+      input = jQuery(input);
+      var new_name_value = input.attr('name').replace('[' + last_index + ']', '[' + (last_index + 1) + ']');
+      input.attr('name', new_name_value);
+      input.val(null); // null -> nil
+    });
+    existingImageForm.after(newImageForm);
+    existingImageForm.removeAttr('id');
+    
+  });
+});

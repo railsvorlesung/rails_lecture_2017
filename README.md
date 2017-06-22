@@ -35,7 +35,11 @@ cf run-task <appname> '<task to execute on server, for example bundle exec rake 
 * http://guides.rubyonrails.org/   # explain all basics of Ruby on Rails
 * http://railscasts.com/
 * http://afreshcup.com/
-* http://rubular.com/
+* http://rubular.com/              # Interactive Regex Helper
+* http://rubydoc.info/             # here exists documentation for mostly every ruby gem
+* https://zealdocs.org/            # Offline Documentation for Win/Linux
+* http://www.imagemagick.org/script/command-line-processing.php#option  # Examples of Paperclip image size properties
+* https://12factor.net/            # How to programm a good CloudFoundry / Anynines / Heroku  App
 
 ## Usefull optional gems
 
@@ -47,6 +51,8 @@ cf run-task <appname> '<task to execute on server, for example bundle exec rake 
 * kaminari (pagination of a list of elements)
 * clockwork (to manage tasks like cronjobs)
 * activejob (for background processes, pls read the Rails Guide for further information)
+
+* prawn (PDF generation)
 
 ### Other Templating Engines
 
@@ -62,6 +68,7 @@ cf run-task <appname> '<task to execute on server, for example bundle exec rake 
   * guard-bundler (runs bundle install if Gemfile changed)
 
 * shoulda-matchers (provide matchers for rspec tot est validatiosn for example)
+* vcr (records web requests for store test conditions)
 
   
 

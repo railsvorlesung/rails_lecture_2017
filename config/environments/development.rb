@@ -12,6 +12,7 @@ Rails.application.configure do
   # Show full error reports.
   config.consider_all_requests_local = true
   config.action_controller.default_url_options = {host: '127.0.0.1:3000'}
+  config.action_mailer.default_url_options = {host: '127.0.0.1:3000'}
 
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
@@ -45,8 +46,10 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
+  config.action_mailer.delivery_method = :letter_opener_web
 
   # Raises error for missing translations
+  #
   # config.action_view.raise_on_missing_translations = true
 
   # Use an evented file watcher to asynchronously detect changes in source code,

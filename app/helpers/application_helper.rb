@@ -15,7 +15,7 @@ module ApplicationHelper
   # * notice
   # flash[:errors]
   def flash_dom_class(flash_name)
-    bootstrap_class = case
+    bootstrap_class = case flash_name
                       when /errors/
                         'danger'
                       else
