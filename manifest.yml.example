@@ -1,0 +1,21 @@
+applications:
+- name: blog-test
+  instances: 1 # the number of instances to start
+  buildpack: ruby_buildpack
+
+
+  services:
+  - blog-test-postgresql # TODO: adjust to a mysql instance name
+
+  env:
+    RAILS_ENV: production
+    RAILS_LOG_TO_STDOUT: true
+    APP_ID: 'oauth id'
+    APP_SECRET: 'oauth secred'
+    AWS_ACCESS_KEY_ID: aws access key
+    AWS_SECRET_ACCESS_KEY: aws secret key
+    AWS_REGION: 'eu-west-1'
+    AWS_BUCKET: a9s-railsvorlesung
+    AWS_PATH:  home/<username>
+
+

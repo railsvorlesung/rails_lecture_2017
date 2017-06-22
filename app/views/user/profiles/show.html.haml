@@ -1,0 +1,10 @@
+.panel.panel-default
+  .panel-heading= UserProfile.model_name.human
+  .panel-body 
+    =image_tag @profile.image.url
+    - @profile.attributes.except('user_id', 'id').each do |key,value|
+      %dl
+        %dt= UserProfile.human_attribute_name(key)
+        %dd= value
+
+

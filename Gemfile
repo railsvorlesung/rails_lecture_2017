@@ -31,6 +31,8 @@ gem 'omniauth-github'
 gem 'paperclip'
 gem 'activeadmin'
 gem 'prawn'
+gem 'aws-sdk'
+gem 'fog'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

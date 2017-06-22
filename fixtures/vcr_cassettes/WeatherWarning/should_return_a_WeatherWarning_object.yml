@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://www.dwd.de/DE/wetter/warnungen_aktuell/warnlagebericht/rheinland-pfalz_saarland/warnlage_rps_node.html
+    uri: http://some-wetter-website/
     body:
       encoding: US-ASCII
       string: ''

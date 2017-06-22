@@ -48,6 +48,17 @@ Rails.application.configure do
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
   config.log_level = :debug
+  config.paperclip_defaults = {
+    :storage => :fog,
+     :fog_credentials => {
+       :provider => "AWS",
+       :region => 'eu-west-1',
+       :scheme => 'https',
+       :aws_access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+       :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+     },
+     :fog_host => "https://s3-eu-west-1.amazonaws.com/#{ENV['AWS_BUCKET']}/#{ENV['AWS_PATH']}"
+  }
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]

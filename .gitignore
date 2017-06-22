@@ -7,11 +7,13 @@ capybara-*.html
 /db/*.sqlite3-journal
 /public/system
 /coverage/
+config/env.yml
 /spec/tmp
 *.orig
 rerun.txt
 pickle-email-*.html
 
+manifest.yml
 Teilnehmer
 Teilnehmer_
 

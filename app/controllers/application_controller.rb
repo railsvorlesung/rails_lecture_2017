@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
   # NOTE optional (if you want to keep the whole application protected with htacces, for example a test installation)
   before_action :authorize
 
+  before_action :create_profile_if_necessary, if: :current_user
   protected
 
   def authorize
@@ -21,5 +22,11 @@ class ApplicationController < ActionController::Base
       (user == 'blog' && password == 'test123')
     end
   end # #authorize
+
+  def create_profile_if_necessary
+    if current_user.user_profile.blank?
+      redirect_to new_user_profile_path
+    end
+  end # #create_profile_if_necessary
 
 end

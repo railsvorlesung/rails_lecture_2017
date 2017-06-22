@@ -9,6 +9,35 @@
 * paperclip or carrierwave (image upload/file upload)
 * letter_opener or letter_opener_web(opens letter into a new windows to debug outgoing mails)
 
+## AWS S3 
+* Region: eu-west-1
+* a9s-railsvorlesung
+
+user hat zugriff darin auf home/$username
+railsvorlesung8 auf a9s-railsvorlesung/home/railsvorlesung8/ schreiben
+
+Environment Variables:
+
+AWS_ACCESS_KEY_ID: <key>
+AWS_SECRET_ACCESS_KEY: <secret>
+AWS_REGION: 'eu-west-1'
+AWS_BUCKET: a9s-railsvorlesung
+AWS_PATH:  home/<username>
+
+Paperclip config:
+
+
+  config.paperclip_defaults = {
+    :storage => :fog,
+     :fog_credentials => {
+       :provider => "AWS",
+       :region => 'eu-west-1',
+       :scheme => 'https',
+       :aws_access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+       :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+     },
+     :fog_host => "https://s3-eu-west-1.amazonaws.com/#{ENV['AWS_BUCKET']}/#{ENV['AWS_PATH']}"
+  }
 
 ## Pushto anynines /cloudfoundry
 
@@ -26,7 +55,7 @@ cf ssh <appname> (to connect via ssh to your app instance)
 cf env <appname> (prints the OS environment variables)
 
 cf run-task <appname> '<task to execute on server, for example bundle exec rake db:migrate>'
-
+cf ssh <appname> -t -c "/tmp/lifecycle/launcher /home/vcap/app 'rails c' ''"
 
 # Optional and further informations
 
