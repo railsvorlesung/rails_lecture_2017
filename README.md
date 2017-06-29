@@ -62,17 +62,21 @@ The manifest will be generated after the first cf push.
 cf login -a https://api.aws.ie.a9s.eu
 
 cf push <appname>
+
 cf service (to list all created services)
+
 cf create-server a9s-postgres postgres-single-small <databasename> (to create a postgresserver for example)
 
 cf marketplace (to list all possible services)
 
 cf logs <appname> (to access the log files)
+
 cf ssh <appname> (to connect via ssh to your app instance)
 
 cf env <appname> (prints the OS environment variables)
 
 cf run-task <appname> '<task to execute on server, for example bundle exec rake db:migrate>'
+
 cf ssh <appname> -t -c "/tmp/lifecycle/launcher /home/vcap/app 'rails c' ''"
 
 # Optional and further informations
