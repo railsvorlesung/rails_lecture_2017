@@ -54,6 +54,9 @@ https://wiki.ubuntuusers.de/Dateimanager/#muCommander
 ## Pushto anynines /cloudfoundry
 
 define them into manifest.yml
+The manifest will be generated after the first cf push.
+
+cf login -a https://api.aws.ie.a9s.eu
 
 cf push <appname>
 cf service (to list all created services)
@@ -89,7 +92,7 @@ cf ssh <appname> -t -c "/tmp/lifecycle/launcher /home/vcap/app 'rails c' ''"
 
 ## Usefull optional gems
 
-* envyable (loads yaml file into environment variables for local development)
+* envyable or figaro (loads yaml file into environment variables for local development)
 * better-errors (prints better readable error pages in development)
 * rails-i18n (default translations for many languages)
 * jquery-rails (if query is missing by bootstrap)
