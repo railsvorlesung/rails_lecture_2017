@@ -31,7 +31,6 @@ gem 'omniauth-github'
 gem 'paperclip'
 gem 'activeadmin'
 gem 'prawn'
-gem 'aws-sdk'
 gem 'fog'
 
 # Use jquery as the JavaScript library
@@ -61,6 +60,7 @@ gem 'letter_opener_web'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'simplecov'
   gem 'sqlite3'
   gem 'guard'
   gem 'guard-rspec'

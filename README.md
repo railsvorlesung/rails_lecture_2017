@@ -93,6 +93,13 @@ cf ssh <appname> -t -c "/tmp/lifecycle/launcher /home/vcap/app 'rails c' ''"
 * http://www.imagemagick.org/script/command-line-processing.php#option  # Examples of Paperclip image size properties
 * https://12factor.net/            # How to programm a good CloudFoundry / Anynines / Heroku  App
 
+Install Rails on Ubuntu:
+* https://gorails.com/setup/ubuntu/16.04
+
+RSpec Example: 
+
+* https://github.com/fgrehm/letter_opener_web/tree/master/spec
+
 ## Usefull optional gems
 
 * envyable or figaro (loads yaml file into environment variables for local development)
