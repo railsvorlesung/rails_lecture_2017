@@ -53,6 +53,9 @@ https://wiki.ubuntuusers.de/Dateimanager/#muCommander
 
 ## Pushto anynines /cloudfoundry
 
+[A9s Cheatsheet](
+https://blog.anynines.com/cloud-foundry-command-line-cheat-sheetutm_sourcecf-summitutm_mediumprintutm_campaigncf-summit-cheat-sheet/)
+
 define them into manifest.yml
 The manifest will be generated after the first cf push.
 
