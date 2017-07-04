@@ -16,6 +16,6 @@ applications:
     AWS_SECRET_ACCESS_KEY: aws secret key
     AWS_REGION: 'eu-west-1'
     AWS_BUCKET: a9s-railsvorlesung
-    AWS_PATH:  home/<username>
+    AWS_PATH:  home/<username>/
 
 
