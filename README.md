@@ -32,15 +32,34 @@ AWS_PATH:  home/<username>
   config.paperclip_defaults = {
     :storage => :fog,
      :fog_credentials => {
-       :provider => "AWS",
-       :region => 'eu-west-1',
-       :scheme => 'https',
-       :aws_access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+       :provider              => "AWS",
+       :region                => 'eu-west-1',
+       :scheme                => 'https',
+       :aws_access_key_id     => ENV['AWS_ACCESS_KEY_ID'],
        :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
      },
      :fog_host => "https://s3-eu-west-1.amazonaws.com/#{ENV['AWS_BUCKET']}/#{ENV['AWS_PATH']}"
   }
 ```
+
+or
+
+```ruby
+  config.paperclip_defaults = {
+    :storage => :fog,
+     :fog_credentials => {
+       :provider              => "AWS",
+       :region                => 'eu-west-1',
+       :scheme                => 'https',
+       :aws_access_key_id     => ENV['AWS_ACCESS_KEY_ID'],
+       :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+     },
+     :fog_directory => "#{ENV['AWS_BUCKET']}/#{ENV['AWS_PATH']}",
+     :fog_host      => "https://s3-eu-west-1.amazonaws.com"
+  }
+
+```
+
 
 ### Explorer for S3
 

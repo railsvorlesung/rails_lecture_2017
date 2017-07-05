@@ -51,15 +51,14 @@ Rails.application.configure do
   config.paperclip_defaults = {
     :storage => :fog,
      :fog_credentials => {
-       :provider => "AWS",
-       :region => 'eu-west-1',
-       :scheme => 'https',
-       :aws_access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+       :provider              => "AWS",
+       :region                => 'eu-west-1',
+       :scheme                => 'https',
+       :aws_access_key_id     => ENV['AWS_ACCESS_KEY_ID'],
        :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
      },
-     :fog_directory => ENV['AWS_BUCKET'],
-     :path =>          ENV['AWS_PATH'],   # must have / on ending
-     :fog_host => "https://s3-eu-west-1.amazonaws.com"
+     :fog_directory => "#{ENV['AWS_BUCKET']}/#{ENV['AWS_PATH']}",
+     :fog_host      => "https://s3-eu-west-1.amazonaws.com"
   }
 
   # Prepend all log lines with the following tags.
