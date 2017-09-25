@@ -28,6 +28,17 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.paperclip_defaults = {
+    :storage => :fog,
+     :fog_credentials => {
+       :provider              => "AWS",
+       :region                => 'eu-west-1',
+       :scheme                => 'https',
+       :aws_access_key_id     => ENV['AWS_ACCESS_KEY_ID'],
+       :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+     },
+     :fog_directory => "#{ENV['AWS_BUCKET']}/#{ENV['AWS_PATH']}"
+  }
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
